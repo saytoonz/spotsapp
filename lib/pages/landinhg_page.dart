@@ -73,10 +73,11 @@ class _LandingPageState extends State<LandingPage> {
             ),
             Expanded(
               child: ListView(
-                children: const [
-                  SizedBox(height: 5),
-                  LandingListItems(),
-                  SizedBox(height: 5),
+                children: [
+                  const SizedBox(height: 5),
+                  ...List.generate(20, ((index) => const LandingListItems()))
+                      .toList(),
+                  const SizedBox(height: 5),
                 ],
               ),
             ),
