@@ -25,7 +25,10 @@ class LandingListItems extends StatelessWidget {
         title: Row(
           children: const [
             Expanded(
-              child: Text("World Cup"),
+              child: Text(
+                "World Cup",
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
             Text(
               "4",
