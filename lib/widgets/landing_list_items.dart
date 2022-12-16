@@ -8,7 +8,7 @@ class LandingListItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
       decoration: BoxDecoration(
         color: AppColors.appDark,
         borderRadius: BorderRadius.circular(10),
@@ -22,7 +22,19 @@ class LandingListItems extends StatelessWidget {
             shape: BoxShape.circle,
           ),
         ),
-        title: const Text("World Cup"),
+        title: Row(
+          children: const [
+            Expanded(
+              child: Text("World Cup"),
+            ),
+            Text(
+              "4",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
         trailing: const Icon(
           Icons.keyboard_arrow_down,
         ),
